@@ -54,7 +54,7 @@ lista2.sort()
 print(lista2)
 #lista3.sort()
 print(lista3)
-print('Lunes' in lista3)
+print('lunes' in lista3)
 lista2[2] = 1000
 print(lista2)
 print()
