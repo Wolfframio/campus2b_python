@@ -64,9 +64,27 @@ print()
 tamaño de la segunda lista en la lista4?
 14.Extiende la lista6 con la lista3.
 """
+
+lista1 = ["lunes", "martes", "miercoles", "jueves", "viernes"]
+
+lista6 = lista1.copy()
+#es lo mismo que lista6 = list(lista1) clona una lista
+
+lista7 = lista1.copy()
+
+lista8 = lista7
+
+
 lista1.append('Domingo')
 print(lista1)
 print(len(lista5))
 print(len(lista4[1]))
 lista6.extend(lista3)
 print(lista6)
+#insertar un elemento en la posicion 3 de la lista6
+lista6.insert(3, "inserción")
+
+#insertar un elemento en la primera posicion de la primera lista de la lista4
+lista4[0].insert(0, "inserción")
+
+
