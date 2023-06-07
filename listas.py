@@ -26,6 +26,7 @@ lista8 que sea un alias de lista7. Crea una lista vacía en lista9
 
 lista1 = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']   
 lista2 = [1, 2, 3, 4, 5, 6, 7]
+lista2 = list(range(1, 8))
 
 lista6 = list(lista1)
 lista7 = list(lista1)
