@@ -92,7 +92,7 @@ while iteracion < 5:
 5. Crear un programa que tras introducir un número, nos diga si dicho número tiene
 cubo perfecto o no.
 Nota: 8 cubo perfecto de 2, 27 cubo perfecto de 3, 64 cubo perfecto de 4, …
-
+"""
 num = int(input("Introduzca número mayor que 0:\n"))
 
 raiz_cubica = 0
@@ -106,7 +106,7 @@ else:
 
 
 
-
+"""
 6. Crea un programa que añada elementos a una lista de manera indefinida,
 mientras pulsemos una tecla.
 NOTA: Cada vez que introduzcamos un elemento en la lista, nos deberá preguntar
@@ -129,12 +129,17 @@ while a != 'q':
 Nota: Factorial de 4 = 4! = 4 * 3 * 2 * 1
 Factorial de 5 = 5! = 5 * 4 * 3 * 2 * 1
 """
-x = int(input("Introduce un num:\n"))
+
 
 def factorial (nb):
-    y = nb * factorial(nb - 1)
-    return y
-print(factorial(x))
+    if nb == 0:
+        return 1
+    else:
+	    return nb * factorial(nb - 1)
+
+x = int(input("Introduce un num:\n"))
+f = factorial(x)
+print(f)
 
 """
 8. Crear un programa que extráiga el total de vocales existentes en una cadena de
@@ -143,14 +148,47 @@ NOTA: El programa nos pedirá introducir una cadena de texto y nos devolverá el
 total de vocales. Para simplificar la resolución del ejercicio, asegúrate de
 convertir la cadena de texto a analizar a minúsculas.
 """
-
-
-
+txt = input("Introduzca un texto:\n")
+txt = txt.lower()
+vowels = ('a', 'e', 'i', 'o', 'u')
+count = 0
+for i in txt:
+    if i in vowels:
+        count += 1
+if count == 0:
+    print ("No hay ninguna vocal")
+elif count == 1:
+    print (f"Hay {count} vocal")
+else:
+    print (f"Hay {count} vocales")
 
 """
 9. Crear un programa que nos diga si una cadena de texto, contiene las vocales “i”
 y “u”.
 """
+txt = input("Introduzca un texto:\n")
+
+
+
+txt = txt.lower()
+if 'i' in txt and 'u' in txt:
+    print ("Yes")
+else:
+    print ("Nope")
+
+
+
+counti = 0
+countu = 0
+for i in txt:
+	if i == 'i':
+		counti += 1
+	elif i == 'u':
+		countu +=1
+if counti > 0 and countu > 0:
+	print("Hay al menos 1 'i' y 1 'u'")
+else:
+	print("No se dan las condiciones")
 
 
 """
@@ -160,8 +198,23 @@ Pej, si introducimos un 8, el programa deberá decir Agosto, e imprimir en panta
 Agosto, Septiembre, Octubre, Noviembre, Diciembre, Enero, ... , Julio
 """
 
+try:
+	tuple = ('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre')
+	num = (int(input("Introduzca número de mes:\n"))) - 1
+	print(f"El mes correspondiente es {tuple[num]}")
+except IndexError:
+	print("No ha introducido un número de mes válido")
+
 
 """
 11.Desarrollar un programa que dada una cadena de texto, la invierta. Intenta
 plantear el ejercicio con WHILE y FOR
 """
+
+txt = input("Introduzca un texto:\n")
+i = 0
+txt1 = ""
+for j in txt:
+    txt1 += txt[-i - 1]
+    i += 1
+print(txt1)
